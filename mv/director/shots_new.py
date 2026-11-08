@@ -628,9 +628,11 @@ def build_shots(m):
     def s_end(t, lt, d):
         pg(t, rules=0., frame=1., grid=.2)
         props.bulbs(m, W, W * .10, W * .90, H * .09, n=13, a=.5, beat=kick(t))
-        typo.display(m, 'MV Opus5.5×DeepSeek V4.1 Flash', W * .5, H * .46, 46, m.f_decol, INK,
-                     align='center', alpha=ease_out(clamp(lt / .5)))
-        typo.micro(m, 'THANK YOU FOR COMING', W * .5, H * .57, 13, m.f_mono, INK, align='center',
+        typo.display(m, 'Astramia', W * .5, H * .40, 96, m.f_pop, INK,
+                     align='center', alpha=ease_out(clamp(lt / .45)))
+        typo.display(m, 'MV Opus5.5×DeepSeek V4.1 Flash', W * .5, H * .53, 40, m.f_decol, INK,
+                     align='center', alpha=ease_out(clamp((lt - .2) / .6)))
+        typo.micro(m, 'THANK YOU FOR COMING', W * .5, H * .63, 13, m.f_mono, INK, align='center',
                    tracking=.34, alpha=.42 * ease_out(clamp((lt - .4) / .6)))
         cl = ease_inout(clamp((lt - 1.0) / 1.7))
         props.curtain(m, W, H, close=cl, c=INK, a=.85, folds=11)
